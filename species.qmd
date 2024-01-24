@@ -1,0 +1,67 @@
+---
+title: "Species delimitation"
+author: Luís Valente
+---
+
+```{r, echo=F}
+library(ape)
+cyanistes<-read.nexus('Cyanistes.tre')
+```
+
+## Species delimitation using the GMYC model
+
+How many species of blue tits are there? We will use a model to delimit species based on the divergence between clades in the phylogeny. The GMYC model (Fujisawa & Barraclough 2013, *Systematic Biology*), which stands for "Generalized Mixed Yule Coalescent Approach", is a likelihood method for delimiting species by fitting within- and between-species branching models to reconstructed gene trees.
+
+Load the `splits` package ("SPecies' LImits by Threshold Statistics"), which includes an R implementation of the GMYC model.
+
+```{r setup3, warning=FALSE,message=FALSE}
+library(splits) 
+```
+
+In case you haven't done so above, remove the outgroup (delete all *Parus* individuals), by creating a new object without all the tips belonging to the outgroup.
+
+```{r}
+cyanistes_ingroup<-drop.tip(cyanistes,c("Parus_major_major_KP759174.1",
+                                         "Parus_major_DQ792786.1", 
+                                         "Parus_major_DQ792787.1",
+                                         "Parus_major_EU167009.1", 
+                                         "Parus_major_KJ456375.1"))
+```
+
+Now we can fit the GMYC model to the data.
+
+```{r, results="hide"}
+cyanistes_gmyc <- gmyc(cyanistes_ingroup)
+```
+
+Plot the statistics. How many clusters are identified? What do these clusters mean?
+
+```{r, results="hide"}
+summary(cyanistes_gmyc)
+```
+
+View which tips in the tree are assigned to each cluster
+
+```{r, results="hide"}
+spec.list(cyanistes_gmyc)
+```
+
+Visualize the results of the GMYC model (Hit return to view the different plots). **May require some adjusting on your screen.**
+
+```{r, eval=F}
+plot(cyanistes_gmyc)
+```
+
+-   How many "species" does the model identify?
+
+-   Do the clusters match species based on the tip names?
+
+-   Would you recommend a taxonomic revision of this group?
+
+-   How many **endemic** species of *Cyanistes* are there in the Canary Islands?
+
+-   How many **endemic subspecies**?
+
+-   What other sources of evidence would be useful to define species of blue tits in the Canarian archipelago?
+
+-   What species would you give priority to conservation (if any)?

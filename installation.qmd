@@ -1,0 +1,39 @@
+---
+title: "Installation"
+author: Luís Valente
+---
+
+## Install required software:
+
+-   [R](https://www.r-project.org)
+
+-   [Rstudio](https://posit.co)
+
+-   [Figtree](https://github.com/rambaut/figtree/releases)
+
+-   [Geneious](https://manage.geneious.com/free-trial) **Free trial lasts for 30 days**
+
+-   [Beast 2](https://www.beast2.org) (Includes Beast, Beauti, TreeAnnotator)
+
+-   [Tracer](https://github.com/beast-dev/tracer/releases/tag/v1.7.2 )
+
+
+
+## Install required R packages
+
+Open and run this script in Rstudio. This should install all required R packages (**may take a while!**).
+
+```{r install, eval=F}
+install.packages('ape',dependencies = TRUE)
+install.packages('phytools',dependencies = TRUE)
+install.packages('splits',dependencies = TRUE)
+```
+
+Check if packages load correctly
+
+```{r loadp, eval=F}
+load(ape)
+load(phytools)
+load(splits)
+```
+

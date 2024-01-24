@@ -1,0 +1,110 @@
+---
+title: "Visualise and handle trees"
+author: Luís Valente
+---
+
+## Phylogeny handling and visualisation in R and Figtree
+
+![](images/FigTree-AR_8-01.png)
+
+### Open your maximum credibility tree in Figtree.
+
+Here you can visualize the tree topology, the posterior probability of different nodes (support values) and the node ages. Explore the different visualisation options in the drop-down menus by trying out different settings.
+
+### Open R to load your tree
+
+Now let's explore some of the functions of R applied to phylogenies.
+
+**Welcome to R**
+
+First let's clear your workspace, in case you have some saved objects there that may interfere with the practical
+
+```{r}
+rm(list=ls())
+```
+
+Load the necessary packages to run the practical
+
+```{r setup, warning=FALSE,message=FALSE}
+library(ape)
+```
+
+Load the maximum clade credibility tree you produced in the Beast analysis. Here you need to change the path to the file to match the location on your computer
+
+```{r read}
+cyanistes<-read.nexus('Cyanistes.tre')
+```
+
+Let's see what the `cyanistes` object is
+
+```{r}
+cyanistes
+```
+
+Let's see what the tip labels are
+
+```{r, eval=FALSE}
+cyanistes$tip.label
+```
+
+Plot the phylogeny
+
+```{r}
+plot(cyanistes)
+```
+
+Looks a bit messy.
+
+Plot with smaller tip labels
+
+```{r}
+plot(cyanistes,cex=0.4)
+```
+
+And a neater version, using the `ladderize` option:
+
+```{r}
+plot(ladderize(cyanistes),cex=0.4,no.margin=TRUE)
+```
+
+Check if the tree is ultrametric. This is essential for downstream analyses that rely on a dated tree.
+
+```{r}
+is.ultrametric(cyanistes)
+```
+
+Plot the node labels
+
+```{r}
+plot(ladderize(cyanistes),cex=0.4,no.margin=TRUE)
+nodelabels(cex=0.3,frame='circle',bg='grey')
+```
+
+Plot as a fan.
+
+```{r}
+plot(ladderize(cyanistes),type='fan',cex=0.3,no.margin=TRUE,)
+```
+
+Zoom-in on different parts of the tree. With the function below you can click on parts of the tree to see a zoomed-in version.
+
+```{r, eval=FALSE}
+subtreeplot(ladderize(cyanistes),cex=0.4)
+```
+
+Remove the outgroup (delete all *Parus* individuals), by creating a new object without all the tips belonging to the outgroup.
+
+```{r}
+cyanistes_ingroup<-drop.tip(cyanistes,c("Parus_major_major_KP759174.1",
+                                         "Parus_major_DQ792786.1", 
+                                         "Parus_major_DQ792787.1",
+                                         "Parus_major_EU167009.1", 
+                                         "Parus_major_KJ456375.1"))
+```
+
+And we can now plot the new tree with only the ingroup to check if it worked:
+
+```{r}
+par(mfrow=c(1,1))
+plot(ladderize(cyanistes_ingroup),cex=0.4,no.margin=TRUE)
+```

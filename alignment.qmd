@@ -1,0 +1,34 @@
+---
+title: "DNA sequence alignment"
+author: Luís Valente
+---
+
+## Sequence retrieval and alignment in Geneious
+
+![](images/dnaalignment-01.png)
+
+A large number of genomic loci have been sequenced for *Cyanistes* across multiple studies. For simplictiy, we will build a phylogeny based on a single molecular marker - the mitochondrial cytochrome-B gene. We will download the sequences from Genbank, using software Geneious.
+
+### Download sequences from Genbank.
+
+Use Geneious (or your preferred software to deal with DNA sequences) to download CytB sequences. A list of the accession numbers for the sequences we want to download is [available in this file](data/Genbank_accession_numbers_cyt-B.txt).
+
+In the NCBI search tool of Geneious, paste the accession numbers from the file above (all at once works).
+
+Create a new folder called 'CytB' and drag the 70 CytB sequences to it.
+
+### Batch rename sequences.
+
+Rename the sequence files using the information contained within the Genbank files. This facilitates visualisation the tree (and is a crucial step to ensure we are all working with the **exact** same tip names in the phylogeny.
+
+Select the sequences and use the Batch rename function under 'Edit' in Geneious. Follow this scheme:
+
+*Organism_Accession*
+
+### Create an alignment for
+
+CytB sequences. Select all sequences and use the 'Muscle' alignment function in Geneious (Tools: Align: Multiple Alignment: Muscle Alignment). This will create an alignment file within the folder where the sequences are located. The sequences and the alignment file are linked, which means changes you make directly in the sequences will automatically be made also to the alignment.
+
+### Export the alignment:
+
+Export as Nexus (\*.nex), selecting the option to replace spaces by underscores in the sequence names.

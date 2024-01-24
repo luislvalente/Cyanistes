@@ -1,0 +1,50 @@
+---
+title: "Phylogeny reconstruction and dating"
+author: Luís Valente
+---
+
+## Phylogenetic reconstruction and divergence dating in Beast
+
+![](images/beast-banner.png){width="425"}
+
+### Import the nexus file into software BEAUti 2.
+
+### Set up the Beast 2 xml file.
+
+Select the following options in BEAUti 2:
+
+a\. [Site Model Tab]{.underline}: We're going to use the HKY+I+G model (normally you would first find the best model using a software like jModeltest). Select Estimate substitution rate; 4 Gamma rate categories; Estimate Shape (Leave at default 1.0); Proportion of Invariant sites: 0.1; Estimate Proportion Invariant; HKY model; Estimate Kappa.
+
+b\. [Clock Model Tab]{.underline}: Select Strict Clock; Clock.rate: 0.01035 (This is equivalent to 2.07% pairwise divergence following Weir & Schluter *Mol Ecol*. 2008. 2.07/2/100=0.01035 per lineage rate)
+
+c\. [Priors Tab]{.underline}: Set Birth Death Model as tree prior. Leave other prior options with the default values.
+
+d\. [MCMC tab:]{.underline} Set chain length: 5,000,000 (i.e. 5 million. If it's too slow on your computer, you could reduce this to 1 million - the longer you run the MCMC for the most likely it is to converge); Tracelog file name: Cyanistes.log
+
+### Export and save the XML file.
+
+In File: Save as file "Cyanistes.xml"
+
+### Run XML file in BEAST 2.
+
+Open BEAST 2 and load "Cyanistes.xml" file that was created in BEAUti 2. This will run the MCMC chain -- [this will take several minutes.]{.underline}
+
+Note: Normally you should run multiple independent chains and combine the results from several runs using software "LogCombiner", but for practical purposes we will run a single chain.
+
+### Check for convergence of MCMC run.
+
+Once the BEAST run is completed load the Beast output 'Cyanistes.log' file to software Tracer. Here you can check whether the diagnostics of the MCMC run are good - if ESS values are low (flagged in red), this means your run did not converge; and the under the "Tracer" tab, the plot should look like a "caterpillar", without abrupt changes. For the purposes of the practical, you can proceed even if the run diagnostics are not great (would have to run a longer chain).
+
+### Generate maximum clade credibility tree.
+
+Load Beast output 'Cyanistes.trees' file to TreeAnnotator to summarize the results of the posterior distribution of trees into a single tree (maximum clade credibility tree)
+
+Select:
+
+a\. Target tree type: 'Maximum clade credibility';
+
+b\. Burn-in percentage: 20%
+
+c\. Node heights: 'Mean heights"
+
+d\. Output file: "Cyanistes.tre'

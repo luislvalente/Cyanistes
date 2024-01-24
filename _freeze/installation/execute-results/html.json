@@ -1,0 +1,14 @@
+{
+  "hash": "5cec96dcf849b24e2330ad543c067ab6",
+  "result": {
+    "markdown": "---\ntitle: \"Installation\"\nauthor: Luís Valente\n---\n\n\n## Install required software:\n\n-   [R](https://www.r-project.org)\n\n-   [Rstudio](https://posit.co)\n\n-   [Figtree](https://github.com/rambaut/figtree/releases)\n\n-   [Geneious](https://manage.geneious.com/free-trial) **Free trial lasts for 30 days**\n\n-   [Beast 2](https://www.beast2.org) (Includes Beast, Beauti, TreeAnnotator)\n\n-   [Tracer](https://github.com/beast-dev/tracer/releases/tag/v1.7.2 )\n\n\n\n## Install required R packages\n\nOpen and run this script in Rstudio. This should install all required R packages (**may take a while!**).\n\n\n::: {.cell}\n\n```{.r .cell-code}\ninstall.packages('ape',dependencies = TRUE)\ninstall.packages('phytools',dependencies = TRUE)\ninstall.packages('splits',dependencies = TRUE)\n```\n:::\n\n\nCheck if packages load correctly\n\n\n::: {.cell}\n\n```{.r .cell-code}\nload(ape)\nload(phytools)\nload(splits)\n```\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

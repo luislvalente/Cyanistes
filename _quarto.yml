@@ -1,0 +1,25 @@
+project:
+  type: book
+
+execute:
+  freeze: auto
+
+book:
+  title: "Island Biology Course - *Cyanistes* practical"
+  chapters:
+    - index.qmd
+    - introduction.qmd
+    - installation.qmd
+    - alignment.qmd
+    - beast.qmd
+    - handling.qmd
+    - ancestral.qmd
+    - species.qmd
+
+
+format:
+  html:
+    theme:
+      light: cosmo
+      dark: darkly
+    toc: true

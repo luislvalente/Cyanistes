@@ -1,0 +1,14 @@
+{
+  "hash": "6d97ba9add60e18444d8300706312db4",
+  "result": {
+    "markdown": "---\ntitle: \"Species delimitation\"\nauthor: Luís Valente\n---\n\n::: {.cell}\n\n:::\n\n\n## Species delimitation using the GMYC model\n\nHow many species of blue tits are there? We will use a model to delimit species based on the divergence between clades in the phylogeny. The GMYC model (Fujisawa & Barraclough 2013, *Systematic Biology*), which stands for \"Generalized Mixed Yule Coalescent Approach\", is a likelihood method for delimiting species by fitting within- and between-species branching models to reconstructed gene trees.\n\nLoad the `splits` package (\"SPecies' LImits by Threshold Statistics\"), which includes an R implementation of the GMYC model.\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(splits) \n```\n:::\n\n\nIn case you haven't done so above, remove the outgroup (delete all *Parus* individuals), by creating a new object without all the tips belonging to the outgroup.\n\n\n::: {.cell}\n\n```{.r .cell-code}\ncyanistes_ingroup<-drop.tip(cyanistes,c(\"Parus_major_major_KP759174.1\",\n                                         \"Parus_major_DQ792786.1\", \n                                         \"Parus_major_DQ792787.1\",\n                                         \"Parus_major_EU167009.1\", \n                                         \"Parus_major_KJ456375.1\"))\n```\n:::\n\n\nNow we can fit the GMYC model to the data.\n\n\n::: {.cell}\n\n```{.r .cell-code}\ncyanistes_gmyc <- gmyc(cyanistes_ingroup)\n```\n:::\n\n\nPlot the statistics. How many clusters are identified? What do these clusters mean?\n\n\n::: {.cell}\n\n```{.r .cell-code}\nsummary(cyanistes_gmyc)\n```\n:::\n\n\nView which tips in the tree are assigned to each cluster\n\n\n::: {.cell}\n\n```{.r .cell-code}\nspec.list(cyanistes_gmyc)\n```\n:::\n\n\nVisualize the results of the GMYC model (Hit return to view the different plots). **May require some adjusting on your screen.**\n\n\n::: {.cell}\n\n```{.r .cell-code}\nplot(cyanistes_gmyc)\n```\n:::\n\n\n-   How many \"species\" does the model identify?\n\n-   Do the clusters match species based on the tip names?\n\n-   Would you recommend a taxonomic revision of this group?\n\n-   How many **endemic** species of *Cyanistes* are there in the Canary Islands?\n\n-   How many **endemic subspecies**?\n\n-   What other sources of evidence would be useful to define species of blue tits in the Canarian archipelago?\n\n-   What species would you give priority to conservation (if any)?\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
