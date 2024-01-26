@@ -2,3 +2,8 @@
 .Rhistory
 .RData
 .Ruserdata
+/.quarto/
+.DS_Store
+_book
+ancestral_cache
+installation_files
