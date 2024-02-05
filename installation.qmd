@@ -27,7 +27,7 @@ Open and run this script in Rstudio. This should install all required R packages
 install.packages('ape',dependencies = TRUE)
 install.packages('phytools',dependencies = TRUE)
 install.packages('paran')
-install.packages('splits'), repos='http://R-Forge.R-project.org')
+install.packages('splits', repos='http://R-Forge.R-project.org')
 ```
 
 Check if packages load correctly
