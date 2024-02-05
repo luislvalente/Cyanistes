@@ -44,7 +44,7 @@
     "href": "installation.html#install-required-r-packages",
     "title": "3  Installation",
     "section": "3.2 Install required R packages",
-    "text": "3.2 Install required R packages\nOpen and run this script in Rstudio. This should install all required R packages (may take a while!).\n\ninstall.packages('ape',dependencies = TRUE)\ninstall.packages('phytools',dependencies = TRUE)\ninstall.packages('paran')\ninstall.packages('splits'), repos='http://R-Forge.R-project.org')\n\nCheck if packages load correctly\n\nload(ape)\nload(phytools)\nload(splits)",
+    "text": "3.2 Install required R packages\nOpen and run this script in Rstudio. This should install all required R packages (may take a while!).\n\ninstall.packages('ape',dependencies = TRUE)\ninstall.packages('phytools',dependencies = TRUE)\ninstall.packages('paran')\ninstall.packages('splits', repos='http://R-Forge.R-project.org')\n\nCheck if packages load correctly\n\nload(ape)\nload(phytools)\nload(splits)",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Installation</span>"
     ]
