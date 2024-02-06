@@ -25,7 +25,7 @@ library(phytools)
 Load table with the distribution data for all tips in the tree [available in this file](data/Cyanistes_distribution.csv). **Important: the names in the table must match exactly those in your tree otherwise R will not be able to match the distribution to the corresponding tip.**
 
 ```{r}
-island_data<-island_data<-read.csv("data/Cyanistes_distribution.csv",header=T)
+island_data<-read.csv("data/Cyanistes_distribution.csv",header=T)
 ```
 
 View the table. It has 2 columns, one with the tip names and other with their geographical distribution.
@@ -53,6 +53,8 @@ cyanistes_simmap<-make.simmap(cyanistes,islands,model="ER",nsim=1000)
 pd<-summary(cyanistes_simmap,plot=FALSE)
 ```
 
+As the name suggest, simmap is stochastic model, which means that you may get different reconstructions if you run the model different times, and the reconstruction may differ between computers.
+
 Using the code below, **plot the tree with the ancestral areas reconstructed**. The colours indicate the areas reconstructed for each branch.
 
 ```{r, eval=F}
@@ -75,4 +77,4 @@ tiplabels(pie=to.matrix(islands,sort(unique(islands))),piecol=cols,cex=0.1)
 
 -   Combining with Figtree to check for the node ages, can you estimate *when* these colonisations took place?
 
--   Do you see any evidence for back-colonisation in the cytochrome-B data?
+-   Do you see any evidence for back-colonisation in the cytochrome-B data? (this would be a species or clade of mainland individuals, nested within an island clade).

@@ -11,6 +11,10 @@ author: Luís Valente
 
 Here you can visualize the tree topology, the posterior probability of different nodes (support values) and the node ages. Explore the different visualisation options in the drop-down menus by trying out different settings.
 
+A useful option is to select "Node labels" (left panel) and select display "Node ages" to see the ages of the nodes. 
+
+Or select display "posterior" to see the posterior distribution support values.
+
 ### Open R to load your tree
 
 Now let's explore some of the functions of R applied to phylogenies.

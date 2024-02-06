@@ -19,7 +19,7 @@ b\. [Clock Model Tab]{.underline}: Select Strict Clock; Clock.rate: 0.01035 (Thi
 
 c\. [Priors Tab]{.underline}: Set Birth Death Model as tree prior. Leave other prior options with the default values.
 
-d\. [MCMC tab:]{.underline} Set chain length: 5,000,000 (i.e. 5 million. If it's too slow on your computer, you could reduce this to 1 million - the longer you run the MCMC for the most likely it is to converge); Tracelog file name: Cyanistes.log; Tree log file: "Cyanistes.trees"
+d\. [MCMC tab:]{.underline} Set chain length: 5000000 (i.e. 5 million. If it's too slow on your computer, you could reduce this to 1 million - the longer you run the MCMC for the most likely it is to converge); Tracelog file name: Cyanistes.log; Tree log file: "Cyanistes.trees"
 
 ### Export and save the XML file.
 
@@ -47,4 +47,4 @@ b\. Burn-in percentage: 20%
 
 c\. Node heights: 'Mean heights"
 
-d\. Output file: "Cyanistes.tre'
+d\. Output file: "Cyanistes.tre" - **Make sure you select the folder you want to put it in by choosing "Choose File" and select the folder you want to put it in, otherwise you might not be able to find it! Best is to write it to the same folder as the input file.**

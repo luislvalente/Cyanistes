@@ -60,7 +60,7 @@ plot(cyanistes_gmyc)
 
 -   How many **endemic** species of *Cyanistes* are there in the Canary Islands?
 
--   How many **endemic subspecies**?
+-   How many **endemic subspecies**? 
 
 -   What other sources of evidence would be useful to define species of blue tits in the Canarian archipelago?
 

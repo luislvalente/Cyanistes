@@ -5,7 +5,7 @@ author: Luís Valente
 
 ## Install required software:
 
--   [R](https://www.r-project.org)
+-   [R](https://www.r-project.org) **Install latest version of R if possible**
 
 -   [Rstudio](https://posit.co)
 
@@ -29,6 +29,8 @@ install.packages('phytools',dependencies = TRUE)
 install.packages('paran')
 install.packages('splits', repos='http://R-Forge.R-project.org')
 ```
+
+If you have problems with installing package dependencies, this could be because you need to install a more recent version of R.
 
 Check if packages load correctly
 
