@@ -263,7 +263,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(islands)<span class="ot">&lt;-</span>cyanistes<span class="sc">$</span>tip.label</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Perform the ancestral area reconstruction, using the function make.simmap. This a popular function for reconstructing character states along a phylogeny (stochastic character mapping). It is not necessarily the best for ancestral area reconstruction, because there are more appropriate models. But for the purposes of the practical we will use it. <strong>Takes a while to run.</strong></p>
-<div class="cell">
+<div class="cell" data-hash="ancestral_cache/html/simmap_576f57d5102fdd91e4e5678ab7b941af">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">3</span>)</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>cyanistes_simmap<span class="ot">&lt;-</span><span class="fu">make.simmap</span>(cyanistes,islands,<span class="at">model=</span><span class="st">"ER"</span>,<span class="at">nsim=</span><span class="dv">1000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
