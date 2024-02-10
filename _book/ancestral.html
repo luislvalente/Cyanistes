@@ -237,7 +237,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>Load table with the distribution data for all tips in the tree <a href="data/Cyanistes_distribution.csv">available in this file</a>. <strong>Important: the names in the table must match exactly those in your tree otherwise R will not be able to match the distribution to the corresponding tip.</strong></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>island_data<span class="ot">&lt;-</span>island_data<span class="ot">&lt;-</span><span class="fu">read.csv</span>(<span class="st">"data/Cyanistes_distribution.csv"</span>,<span class="at">header=</span>T)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>island_data<span class="ot">&lt;-</span><span class="fu">read.csv</span>(<span class="st">"data/Cyanistes_distribution.csv"</span>,<span class="at">header=</span>T)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>View the table. It has 2 columns, one with the tip names and other with their geographical distribution.</p>
 <div class="cell">
@@ -290,6 +290,7 @@ pi =
 </div>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>pd<span class="ot">&lt;-</span><span class="fu">summary</span>(cyanistes_simmap,<span class="at">plot=</span><span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p>As the name suggest, simmap is stochastic model, which means that you may get different reconstructions if you run the model different times, and the reconstruction may differ between computers.</p>
 <p>Using the code below, <strong>plot the tree with the ancestral areas reconstructed</strong>. The colours indicate the areas reconstructed for each branch.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">oma=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>))</span>
@@ -307,7 +308,7 @@ pi =
 <ul>
 <li><p>Based on this tree, can you infer how many colonisation events of the Canary Islands there have been?</p></li>
 <li><p>Combining with Figtree to check for the node ages, can you estimate <em>when</em> these colonisations took place?</p></li>
-<li><p>Do you see any evidence for back-colonisation in the cytochrome-B data?</p></li>
+<li><p>Do you see any evidence for back-colonisation in the cytochrome-B data? (this would be a species or clade of mainland individuals, nested within an island clade).</p></li>
 </ul>
 
 
