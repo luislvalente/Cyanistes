@@ -27,7 +27,7 @@ Select the sequences and use the Batch rename function under 'Edit' in Geneious.
 
 ### Create an alignment for
 
-CytB sequences. Select all sequences and use the 'Muscle' alignment function in Geneious (Tools: Align: Multiple Alignment: Muscle Alignment). This will create an alignment file within the folder where the sequences are located. The sequences and the alignment file are linked, which means changes you make directly in the sequences will automatically be made also to the alignment.
+CytB sequences. Select all sequences and use the 'Muscle' alignment function in Geneious (`Tools: Align: Multiple Alignment: Muscle Alignment`. If you get an error with Muscle, you can select `Multiple Alignment: Geneious Alignment`). This will create an alignment file within the folder where the sequences are located. The sequences and the alignment file are linked, which means changes you make directly in the sequences will automatically be made also to the alignment.
 
 ### Export the alignment:
 
