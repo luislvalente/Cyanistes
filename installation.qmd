@@ -32,7 +32,7 @@ install.packages('splits', repos='http://R-Forge.R-project.org')
 
 If you have problems with installing package dependencies, this could be because you need to install a more recent version of R.
 
-Check if packages load correctly
+Check if packages load correctly:
 
 ```{r loadp, eval=F}
 library(ape)
