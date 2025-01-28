@@ -5,6 +5,6 @@ author: Luis Valente, Joshua W. Lambert
 
 # Phylogenetic divergence dating and biogeographical reconstruction
 
-Welcome to the *Cyanistes* computer practical of the Island Biology course. Here you will find the material to learn how produce a time-calibrated phylogenetic tree based on Genbank sequences and then use it to reconstruct ancestral areas and perform molecular species delimitation. We will apply these approaches to a case study of a group of birds from the Canary Islands, the afrocanarian blue-tits *Cyanistes.*.
+Welcome to the *Cyanistes* computer practical of the Island Biology course. Here you will find the material to learn how produce a time-calibrated phylogenetic tree based on Genbank sequences and then use it to reconstruct ancestral areas and perform molecular species delimitation. We will apply these approaches to a case study of a group of birds from the Canary Islands, the afrocanarian blue-tits *Cyanistes*.
 
 ![](images/cyanistes_teneriffae.png){width="218"}![](images/cyanistes_caerulus.png){width="226"}![](images/cyanistes_cyanus.png){width="216"}
