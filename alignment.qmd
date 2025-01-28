@@ -19,15 +19,19 @@ Create a new folder called 'CytB' and drag the 70 CytB sequences to it.
 
 ### Batch rename sequences.
 
-Rename the sequence files using the information contained within the Genbank files. This facilitates visualisation the tree (and is a crucial step to ensure we are all working with the **exact** same tip names in the phylogeny.
+Rename the sequence files using the information contained within the Genbank files. This facilitates visualisation of the tree (and is a crucial step to ensure we are all working with the **exact** same tip names in the phylogeny.
 
-Select the sequences and use the Batch rename function under 'Edit' in Geneious. Follow this scheme:
+Select all the sequences at the same time and use the Batch rename function under 'Edit' in Geneious. Follow this scheme (unclick the tick box "Advanced" if needed):
 
 *Organism_Accession*
 
-### Create an alignment for
 
-CytB sequences. Select all sequences and use the 'Muscle' alignment function in Geneious (`Tools: Align: Multiple Alignment: Muscle Alignment`. If you get an error with Muscle, you can select `Multiple Alignment: Geneious Alignment`). This will create an alignment file within the folder where the sequences are located. The sequences and the alignment file are linked, which means changes you make directly in the sequences will automatically be made also to the alignment.
+
+### Create an alignment for the CytB sequences
+
+Select all sequences and use the 'Muscle' alignment function in Geneious (`Tools: Align: Multiple Alignment: Muscle Alignment`. If you get an error with Muscle, you can select `Multiple Alignment: Geneious Alignment`). This will create an alignment file within the folder where the sequences are located. The sequences and the alignment file are linked, which means changes you make directly in the sequences will automatically be made also to the alignment.
+
+You can open the alignment to visualise if you want.
 
 ### Export the alignment:
 
