@@ -9,11 +9,13 @@ author: Luís Valente
 
 ### Import the nexus file into software BEAUti 2.
 
+BEAUti is located in the BEAST software folder.
+
 ### Set up the Beast 2 xml file.
 
 Select the following options in BEAUti 2:
 
-a\. [Site Model Tab]{.underline}: We're going to use the HKY+I+G model (normally you would first find the best model using a software like jModeltest). Select Estimate substitution rate; 4 Gamma rate categories; Estimate Shape (Leave at default 1.0); Proportion of Invariant sites: 0.1; Estimate Proportion Invariant; HKY model; Estimate Kappa.
+a\. [Site Model Tab]{.underline}: We're going to use the HKY+I+G model (normally you would first find the best model using a software like jModeltest). Select Estimate substitution rate; set 4 Gamma rate categories; Estimate Shape (Leave at default 1.0); Proportion of Invariant sites: 0.1; Estimate Proportion Invariant; HKY model; Estimate Kappa.
 
 b\. [Clock Model Tab]{.underline}: Select Strict Clock; Clock.rate: 0.01035 (This is equivalent to 2.07% pairwise divergence following Weir & Schluter *Mol Ecol*. 2008. 2.07/2/100=0.01035 per lineage rate)
 
@@ -21,7 +23,7 @@ c\. [Priors Tab]{.underline}: Set Birth Death Model as tree prior. Leave other p
 
 d\. [MCMC tab:]{.underline} Set chain length: 5000000 (i.e. 5 million. If it's too slow on your computer, you could reduce this to 1 million - the longer you run the MCMC for the most likely it is to converge); Tracelog file name: Cyanistes.log; Tree log file: "Cyanistes.trees"
 
-### Export and save the XML file.
+### Save the XML file.
 
 In File: Save as file "Cyanistes.xml"
 
@@ -37,7 +39,7 @@ Once the BEAST run is completed load the Beast output 'Cyanistes.log' file to so
 
 ### Generate maximum clade credibility tree.
 
-Load Beast output 'Cyanistes.trees' file to TreeAnnotator to summarize the results of the posterior distribution of trees into a single tree (maximum clade credibility tree)
+Load Beast output 'Cyanistes.trees' file to TreeAnnotator (included in BEAST software folder) to summarize the results of the posterior distribution of trees into a single tree (maximum clade credibility tree)
 
 Select:
 

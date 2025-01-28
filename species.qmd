@@ -34,7 +34,7 @@ Now we can fit the GMYC model to the data.
 cyanistes_gmyc <- gmyc(cyanistes_ingroup)
 ```
 
-Plot the statistics. How many clusters are identified? What do these clusters mean?
+Let's look at the output from running the model. How many clusters are identified? What do these clusters mean?
 
 ```{r, results="hide"}
 summary(cyanistes_gmyc)

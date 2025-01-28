@@ -14,3 +14,5 @@ In this practical we are going to infer how many colonisation events have occure
 ![](images/cyanistes_teneriffae.png){width="218"}![](images/cyanistes_caerulus.png){width="226"}![](images/cyanistes_cyanus.png){width="216"}
 
 Finally, we will use the "splits" R package in R to apply the GMYC method (generalized mixed Yule coalescent) to optimize genetic clusters in our tree -- in other words, we will try to identify and delimit how many species are contained in this tree.
+
+In case you can't run a certain step of this practical, there are back-up files available for every step (on Brightspace).

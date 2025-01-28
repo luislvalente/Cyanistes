@@ -11,9 +11,11 @@ author: Luís Valente
 
 Here you can visualize the tree topology, the posterior probability of different nodes (support values) and the node ages. Explore the different visualisation options in the drop-down menus by trying out different settings.
 
-A useful option is to select "Node labels" (left panel) and select display "Node ages" to see the ages of the nodes. 
+A useful option is to select "Node labels" (left panel) and select display "Node ages" to see the ages of the nodes.
 
 Or select display "posterior" to see the posterior distribution support values.
+
+Play around with Figtree - this will be useful for tomorrow's practical :)
 
 ### Open R to load your tree
 
@@ -65,7 +67,9 @@ Plot with smaller tip labels
 plot(cyanistes,cex=0.4)
 ```
 
-And a neater version, using the `ladderize` option:
+If the above still looks odd, try re-setting the margins of the R plot window, using `par(mar = c(0, 0, 0, 0))`
+
+And a neater version, using the `ladderize` option (can you tell the difference?):
 
 ```{r}
 plot(ladderize(cyanistes),cex=0.4,no.margin=TRUE)
@@ -96,7 +100,7 @@ Zoom-in on different parts of the tree. With the function below you can click on
 subtreeplot(ladderize(cyanistes),cex=0.4)
 ```
 
-Remove the outgroup (delete all *Parus* individuals), by creating a new object without all the tips belonging to the outgroup.
+Remove the outgroup (delete all *Parus* individuals), by creating a new tree object without all the tips belonging to the outgroup.
 
 ```{r}
 cyanistes_ingroup<-drop.tip(cyanistes,c("Parus_major_major_KP759174.1",
