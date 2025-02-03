@@ -2,13 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.549">
+<meta name="generator" content="quarto-1.6.40">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Luís Valente">
 
-<title>Island Biology Course - Cyanistes practical - 4&nbsp; DNA sequence alignment</title>
+<title>4&nbsp; DNA sequence alignment – Island Biology Course - *Cyanistes* practical</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -38,12 +38,12 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-8ea72dc5fed832574809a9c94082fbbb.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-626149efe8f5d16e1d391ba177679bf0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-c1966a8c70583a3816b1e3a216c1caf1.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -81,13 +81,13 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./alignment.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">DNA sequence alignment</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -174,7 +174,7 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#download-sequences-from-genbank." id="toc-download-sequences-from-genbank." class="nav-link" data-scroll-target="#download-sequences-from-genbank."><span class="header-section-number">4.1.1</span> Download sequences from Genbank.</a></li>
   <li><a href="#batch-rename-sequences." id="toc-batch-rename-sequences." class="nav-link" data-scroll-target="#batch-rename-sequences."><span class="header-section-number">4.1.2</span> Batch rename sequences.</a></li>
-  <li><a href="#create-an-alignment-for" id="toc-create-an-alignment-for" class="nav-link" data-scroll-target="#create-an-alignment-for"><span class="header-section-number">4.1.3</span> Create an alignment for</a></li>
+  <li><a href="#create-an-alignment-for-the-cytb-sequences" id="toc-create-an-alignment-for-the-cytb-sequences" class="nav-link" data-scroll-target="#create-an-alignment-for-the-cytb-sequences"><span class="header-section-number">4.1.3</span> Create an alignment for the CytB sequences</a></li>
   <li><a href="#export-the-alignment" id="toc-export-the-alignment" class="nav-link" data-scroll-target="#export-the-alignment"><span class="header-section-number">4.1.4</span> Export the alignment:</a></li>
   </ul></li>
   </ul>
@@ -220,13 +220,14 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="batch-rename-sequences." class="level3" data-number="4.1.2">
 <h3 data-number="4.1.2" class="anchored" data-anchor-id="batch-rename-sequences."><span class="header-section-number">4.1.2</span> Batch rename sequences.</h3>
-<p>Rename the sequence files using the information contained within the Genbank files. This facilitates visualisation the tree (and is a crucial step to ensure we are all working with the <strong>exact</strong> same tip names in the phylogeny.</p>
-<p>Select the sequences and use the Batch rename function under ‘Edit’ in Geneious. Follow this scheme:</p>
+<p>Rename the sequence files using the information contained within the Genbank files. This facilitates visualisation of the tree (and is a crucial step to ensure we are all working with the <strong>exact</strong> same tip names in the phylogeny.</p>
+<p>Select all the sequences at the same time and use the Batch rename function under ‘Edit’ in Geneious. Follow this scheme (unclick the tick box “Advanced” if needed):</p>
 <p><em>Organism_Accession</em></p>
 </section>
-<section id="create-an-alignment-for" class="level3" data-number="4.1.3">
-<h3 data-number="4.1.3" class="anchored" data-anchor-id="create-an-alignment-for"><span class="header-section-number">4.1.3</span> Create an alignment for</h3>
-<p>CytB sequences. Select all sequences and use the ‘Muscle’ alignment function in Geneious (<code>Tools: Align: Multiple Alignment: Muscle Alignment</code>. If you get an error with Muscle, you can select <code>Multiple Alignment: Geneious Alignment</code>). This will create an alignment file within the folder where the sequences are located. The sequences and the alignment file are linked, which means changes you make directly in the sequences will automatically be made also to the alignment.</p>
+<section id="create-an-alignment-for-the-cytb-sequences" class="level3" data-number="4.1.3">
+<h3 data-number="4.1.3" class="anchored" data-anchor-id="create-an-alignment-for-the-cytb-sequences"><span class="header-section-number">4.1.3</span> Create an alignment for the CytB sequences</h3>
+<p>Select all sequences and use the ‘Muscle’ alignment function in Geneious (<code>Tools: Align: Multiple Alignment: Muscle Alignment</code>. If you get an error with Muscle, you can select <code>Multiple Alignment: Geneious Alignment</code>). This will create an alignment file within the folder where the sequences are located. The sequences and the alignment file are linked, which means changes you make directly in the sequences will automatically be made also to the alignment.</p>
+<p>You can open the alignment to visualise if you want.</p>
 </section>
 <section id="export-the-alignment" class="level3" data-number="4.1.4">
 <h3 data-number="4.1.4" class="anchored" data-anchor-id="export-the-alignment"><span class="header-section-number">4.1.4</span> Export the alignment:</h3>
@@ -416,18 +417,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -459,7 +449,45 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -494,7 +522,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -542,7 +574,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
@@ -770,12 +801,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./installation.html" class="pagination-link  aria-label=" &lt;span="">
+      <a href="./installation.html" class="pagination-link" aria-label="Installation">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Installation</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./beast.html" class="pagination-link" aria-label="<span class='chapter-number'>5</span>&nbsp; <span class='chapter-title'>Phylogeny reconstruction and dating</span>">
+      <a href="./beast.html" class="pagination-link" aria-label="Phylogeny reconstruction and dating">
         <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Phylogeny reconstruction and dating</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
