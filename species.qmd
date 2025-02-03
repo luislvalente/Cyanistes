@@ -56,12 +56,12 @@ plot(cyanistes_gmyc)
 
 -   Do the clusters match species based on the tip names?
 
--   Would you recommend a taxonomic revision of this group?
-
 -   How many **endemic** species of *Cyanistes* are there in the Canary Islands?
 
 -   How many **endemic subspecies**? 
 
 -   What other sources of evidence would be useful to define species of blue tits in the Canarian archipelago?
+
+-   Would you recommend a taxonomic revision of this group?
 
 -   What species would you give priority to conservation (if any)?

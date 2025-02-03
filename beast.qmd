@@ -7,13 +7,13 @@ author: Luís Valente
 
 ![](images/beast-banner.png){width="425"}
 
-### Import the nexus file into software BEAUti 2.
+### BEAUti
 
-BEAUti is located in the BEAST software folder.
+BEAUti is located in the BEAST software folder. Import the nexus file into software BEAUti. 
 
-### Set up the Beast 2 xml file.
+### Set up the Beast xml file.
 
-Select the following options in BEAUti 2:
+Select the following options in BEAUti:
 
 a\. [Site Model Tab]{.underline}: We're going to use the HKY+I+G model (normally you would first find the best model using a software like jModeltest). Select Estimate substitution rate; set 4 Gamma rate categories; Estimate Shape (Leave at default 1.0); Proportion of Invariant sites: 0.1; Estimate Proportion Invariant; HKY model; Estimate Kappa.
 
@@ -27,7 +27,7 @@ d\. [MCMC tab:]{.underline} Set chain length: 5000000 (i.e. 5 million. If it's t
 
 In File: Save as file "Cyanistes.xml"
 
-### Run XML file in BEAST 2.
+### Run XML file in BEAST.
 
 Open BEAST 2 and load "Cyanistes.xml" file that was created in BEAUti 2. This will run the MCMC chain -- [this will take several minutes.]{.underline}
 
